@@ -71,6 +71,10 @@ body{
     opacity: 1;
 }
 
+.project-img{
+    border-radius: 50%;
+}
+
 #main-header{
     background-color: #b2ac88;
     color: #2e151b;
@@ -216,6 +220,14 @@ body{
     opacity: 80%;
 }
 
+@media(max-width:990px){
+    .project-details h4 {
+        font-size: 1rem;
+    }
+    .project-details p {
+        font-size: 0.7rem;
+    }
+}
 
 @media(max-width:770px){
     .post{
