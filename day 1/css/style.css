@@ -78,10 +78,10 @@ body{
     background-image: url('../images/showcase.jpg');
     background-position: center left;
     background-size: cover;
-    min-height: 200px;
+    min-height: 180px;
     margin-bottom: 30px;
     text-align: center ;
-    padding-top: 10px;
+    padding-top: 15px;
 
 }
 
