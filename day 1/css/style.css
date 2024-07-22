@@ -117,7 +117,7 @@ body{
 #showcase img{
     border-radius: 50%;
     border-top: 10px !important;
-    width: 100px;
+    width: 30%;
 }
 
 #showcase2{
@@ -138,7 +138,7 @@ body{
     color: #222;
     font-size: 40px;
     line-height: 1.5em;
-    padding-top: 40px;
+    padding: 20px;
 }
 
 #welcome-post{
