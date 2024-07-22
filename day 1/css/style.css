@@ -75,6 +75,35 @@ body{
     border-radius: 50%;
 }
 
+.video {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+.video a{
+    text-decoration: none;
+    color: #e85a4f;
+}
+.video img {
+    width: 100%;
+    height: auto;
+}
+.video-title {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+    .video-title {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 576px) {
+    .video-title {
+        font-size: 0.875rem;
+    }
+}
+
 #main-header{
     background-color: #b2ac88;
     color: #2e151b;
