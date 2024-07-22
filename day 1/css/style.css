@@ -1,5 +1,5 @@
 body{
-    background-color: #fff;
+    background-color: #eae7dc !important; 
     color: #333;
     font: normal 16px Arial, Helvetica, sans-serif;
     line-height: 1.5em;
@@ -26,7 +26,7 @@ body{
 	float:right;
 	width:30%;
 	background: #333;
-	color:#fff;
+	color:#eae7dc;
 	padding:10px;
 	box-sizing: border-box;
     border-radius: 15px;
@@ -43,14 +43,14 @@ body{
 }
 
 #main-header{
-    background-color: #32df1b;
-    color: #fff;
+    background-color: #b2ac88;
+    color: #2e151b;
     padding: 10px;
 }
 
 #navbar{
     background-color: #333;
-    color: #fff;
+    color: #eae7dc;
     padding-top: 15px;
 }
 
@@ -68,7 +68,7 @@ body{
 }
 
 #navbar a{
-    color: #fff;
+    color: #eae7dc;
     font-size: 17px;
     text-decoration: none;
     padding-right: 17px;
@@ -78,10 +78,19 @@ body{
     background-image: url('../images/showcase.jpg');
     background-position: center left;
     background-size: cover;
-    min-height: 250px;
+    min-height: 200px;
     margin-bottom: 30px;
     text-align: center ;
+    padding-top: 10px;
+
 }
+
+#showcase img{
+    border-radius: 50%;
+    border-top: 10px !important;
+    width: 100px;
+}
+
 #showcase2{
     background-image: url('../images/showcase_about.jpg');
     background-position: center left;
@@ -95,10 +104,9 @@ body{
     color: #222;
     font-size: 40px;
     line-height: 1.5em;
-    padding-top: 30px;
 }
 #showcase2 h1{
-    color: #fff;
+    color: #eae7dc;
     font-size: 40px;
     line-height: 1.5em;
     padding-top: 40px;
@@ -111,7 +119,7 @@ body{
 
 .fix-me{
     position: fixed;
-    top: 200px;
+    top: 150px;
     background-color: #c9c9c9;
     padding: 10px 10px 0px 10px;
     opacity: 70%;
@@ -160,7 +168,7 @@ body{
 
 #comment-header{
     background-color: #222;
-    color: #fff;
+    color: #eae7dc;
     width: 100%;
     border: #333 20px;
     text-align: center;
@@ -169,7 +177,7 @@ body{
 
 #main-footer{
     background-color: #333;
-    color: #fff;
+    color: #eae7dc;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
@@ -180,45 +188,6 @@ body{
 }
 
 
-
-/* simple counter */
-.bg-counter{
-    background-image: url(../images/counterBG.jpg);
-    background-size: cover;
-}
-#counter-header{
-    text-align: center;
-    padding-top: 50px;
-    color: #6fd1ff;
-}
-
-#count-display{
-    text-align: center;
-    color: #fff;
-    padding-top: 20px;
-}
-
-.count-box{
-    height: 300px;
-    position: relative;
-}
-
-.add{
-    position: absolute;
-    top: 50%;
-    left: 35%;
-}
-.lower{
-    position: absolute;
-    top: 50%;
-    right: 35%;
-}
-
-.add, .lower{
-    color: #6fd1ff;
-    background-color: #333;
-}
-
 @media(max-width:770px){
     .post{
         width:100%;
@@ -228,13 +197,6 @@ body{
     .sidebar{
         width:100%;
         float: none;
-    }
-
-    .add{
-        left: 25%;
-    }
-    .lower{
-        right: 25%;
     }
 }
 
