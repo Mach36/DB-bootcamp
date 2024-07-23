@@ -14,3 +14,6 @@
 // console.log(counter2()); // Output: 1
 // console.log(counter2()); // Output: 2
 
+
+
+// example
