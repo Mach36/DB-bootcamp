@@ -1,40 +1,56 @@
-import axios from "axios";
 import React, { useState } from "react";
+// const URL = "./gallary - app / public / uploaded - images";
 
-function ImageUpload() {
-  const [image, setImage] = useState('');
+function ImageUpload({ images, setImages }) {
+  const [image, setImage] = useState(null);
+  const [caption, setCaption] = useState('');
 
-  function handleImage(event) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+        const value = caption;
+        const newImage = {
+            caption: value,
+            id: images.length + 1,
+            image: image ? URL.createObjectURL(image) : null
+        };
+        setImages((prevImage) => [
+            ...prevImage,
+            newImage
+        ]);
+
+        const updatedImages = JSON.stringify([...images, newImage]);
+        localStorage.setItem("images", updatedImages);
+        event.target.reset();
+        setImage(null);
+        setCaption('');
+  }
+
+  const handleImage = (event) => {
     console.log(event.target.files);
     setImage(event.target.files[0]);
-  }
-
-  function handleApi() {
-    if (!image) {
-      console.error("No image selected");
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append("image", image);
-    for (const x of formData.entries()) {
-      console.log(x);
-    }
-
-    axios
-      .post("http://localhost:3001/gallary-app/public/uploaded-images/", formData)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => {
-        console.error("Error uploading image:", error);
-      });
-  }
+  };
+  const handleCaption = (event) => {
+    console.log(event.target.value);
+    setCaption(event.target.value);
+  };
+    
   return (
-    <div>
-      <input type="file" name="file" onChange={handleImage} />
-      <button onClick={handleApi}>Submit</button>
-    </div>
+    <form className="form" onSubmit={handleSubmit}>
+      <div className="input-container">
+        <label htmlFor="image">Choose Image</label>
+        <input type="file" name="image" onChange={handleImage} />
+        <div className="img-thumbs img-thumbs-hidden" id="img-preview"></div>
+        <input
+          type="text"
+          placeholder="Enter caption..."
+          id="caption"
+          name="caption"
+          value={caption}
+          onChange={handleCaption}
+        />
+      </div>
+      <button type="submit">Upload</button>
+    </form>
   );
 }
 
